@@ -9,6 +9,7 @@ namespace Empwage
             Console.WriteLine("Welcome to employee wage computation");
             Empwage empwage = new Empwage();
             empwage.Attendance();
+            empwage.DailyWage();
         }
     }
 }
