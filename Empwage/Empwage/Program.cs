@@ -10,6 +10,7 @@ namespace Empwage
             Empwage empwage = new Empwage();
             empwage.Attendance();
             empwage.DailyWage();
+            empwage.ParttimeWage();
         }
     }
 }

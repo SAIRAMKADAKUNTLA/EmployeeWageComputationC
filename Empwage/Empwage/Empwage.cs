@@ -32,6 +32,25 @@ namespace Empwage
             else
                 Console.WriteLine("DailyWage for the Employee:0");
         }
+        //UC3-ParttimeWage
+        const int Is_Parttime = 1;
+        
+        int ParttimeHr = 4;
+        int FulltimeHr = 8;
 
+
+        public void ParttimeWage()
+        {
+            Random random = new Random();
+            int Empcheck = random.Next(0, 3);
+            if (Empcheck == Is_Parttime)
+                Console.WriteLine("ParttimeWage:" + ParttimeHr * WageperHr);
+            else if (Empcheck == Is_Fulltime)
+                Console.WriteLine("FulltimeWage:" + FulltimeHr * WageperHr);
+            else
+                Console.WriteLine("EmpWage:0");
+
+        }
     }
+
 }
