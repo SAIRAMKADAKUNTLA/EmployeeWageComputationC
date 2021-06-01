@@ -13,6 +13,7 @@ namespace Empwage
             empwage.ParttimeWage();
             empwage.SwitchCase();
             empwage.MonthlyWage();
+            empwage.TotalWage();
         }
     }
 }

@@ -78,7 +78,7 @@ namespace Empwage
         //UC5-MonthlyWage
 
         const int WorkingDays = 20;
-        
+
         public void MonthlyWage()
         {
             const int Is_Parttime = 1;
@@ -106,6 +106,40 @@ namespace Empwage
                 TotalWage += EmpWage;
                 Console.WriteLine("EmpWage:" + EmpWage);
             }
+            Console.WriteLine("TotalWage:" + TotalWage);
+        }
+        //UC6-TotalWage
+
+        const int WorkingHrs = 100;
+        public void TotalWage()
+        {
+            const int Is_Parttime = 1;
+            const int Is_Fulltime = 2;
+            int TotalHrs = 0;
+            int EmpHrs = 0;
+            int TotalDays = 0;
+            while (TotalHrs <= WorkingHrs && TotalDays <= WorkingDays)
+            {
+                TotalDays++;
+                Random random = new Random();
+                int Empcheck = random.Next(0, 3);
+                switch (Empcheck)
+                {
+                    case Is_Parttime:
+                        EmpHrs = 4;
+                        break;
+                    case Is_Fulltime:
+                        EmpHrs = 8;
+                        break;
+                    default:
+                        EmpHrs = 0;
+                        break;
+                }
+
+                TotalHrs += EmpHrs;
+                Console.WriteLine("Days" + TotalDays + "EmpHrs" + EmpHrs);
+            }
+            int TotalWage = TotalHrs * WageperHr;
             Console.WriteLine("TotalWage:" + TotalWage);
         }
     }
