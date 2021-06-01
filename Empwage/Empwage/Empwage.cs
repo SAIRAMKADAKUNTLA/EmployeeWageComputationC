@@ -51,6 +51,27 @@ namespace Empwage
                 Console.WriteLine("EmpWage:0");
 
         }
-    }
+        //UC4-SwitchCase
+        public void SwitchCase()
+        {
+            int EmpWage = 0;
+            int EmpHrs = 0;
+            Random random = new Random();
+            int Empcheck = random.Next(0, 3);
+            switch (Empcheck)
+            {
+                case Is_Parttime:
+                    EmpHrs = 4;
+                    break;
+                case Is_Fulltime:
+                    EmpHrs = 8;
+                    break;
+                default:
+                    EmpHrs = 0;
+                    break;
+            }
+            EmpWage = EmpHrs * WageperHr;
+            Console.WriteLine("Employee wage:" + EmpWage);
+        }
 
 }
