@@ -34,7 +34,7 @@ namespace Empwage
         }
         //UC3-ParttimeWage
         const int Is_Parttime = 1;
-        
+
         int ParttimeHr = 4;
         int FulltimeHr = 8;
 
@@ -54,6 +54,8 @@ namespace Empwage
         //UC4-SwitchCase
         public void SwitchCase()
         {
+            const int Is_Parttime = 1;
+            const int Is_Fulltime = 2;
             int EmpWage = 0;
             int EmpHrs = 0;
             Random random = new Random();
@@ -73,5 +75,39 @@ namespace Empwage
             EmpWage = EmpHrs * WageperHr;
             Console.WriteLine("Employee wage:" + EmpWage);
         }
+        //UC5-MonthlyWage
+
+        const int WorkingDays = 20;
+        
+        public void MonthlyWage()
+        {
+            const int Is_Parttime = 1;
+            const int Is_Fulltime = 2;
+            int EmpWage = 0;
+            int EmpHrs = 0;
+            int TotalWage = 0;
+            for (int day = 0; day <= WorkingDays; day++)
+            {
+                Random random = new Random();
+                int Empcheck = random.Next(0, 3);
+                switch (Empcheck)
+                {
+                    case Is_Parttime:
+                        EmpHrs = 4;
+                        break;
+                    case Is_Fulltime:
+                        EmpHrs = 8;
+                        break;
+                    default:
+                        EmpHrs = 0;
+                        break;
+                }
+                EmpWage = EmpHrs * WageperHr;
+                TotalWage += EmpWage;
+                Console.WriteLine("EmpWage:" + EmpWage);
+            }
+            Console.WriteLine("TotalWage:" + TotalWage);
+        }
+    }
 
 }

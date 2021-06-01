@@ -11,6 +11,8 @@ namespace Empwage
             empwage.Attendance();
             empwage.DailyWage();
             empwage.ParttimeWage();
+            empwage.SwitchCase();
+            empwage.MonthlyWage();
         }
     }
 }
