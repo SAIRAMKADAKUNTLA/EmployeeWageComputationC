@@ -142,6 +142,38 @@ namespace Empwage
             int TotalWage = TotalHrs * WageperHr;
             Console.WriteLine("TotalWage:" + TotalWage);
         }
-    }
 
+        //UC7-UsingClassmethod
+        public void ComputeEmpwage()
+        {
+            const int Is_Parttime = 1;
+            const int Is_Fulltime = 2;
+            int TotalHrs = 0;
+            int EmpHrs = 0;
+            int TotalDays = 0;
+            while (TotalHrs <= WorkingHrs && TotalDays <= WorkingDays)
+            {
+                TotalDays++;
+                Random random = new Random();
+                int Empcheck = random.Next(0, 3);
+                switch (Empcheck)
+                {
+                    case Is_Parttime:
+                        EmpHrs = 4;
+                        break;
+                    case Is_Fulltime:
+                        EmpHrs = 8;
+                        break;
+                    default:
+                        EmpHrs = 0;
+                        break;
+                }
+
+                TotalHrs += EmpHrs;
+                Console.WriteLine("Days" + TotalDays + "EmpHrs" + EmpHrs);
+            }
+            int TotalWage = TotalHrs * WageperHr;
+            Console.WriteLine("TotalWage:" + TotalWage);
+        }
+    }
 }

@@ -14,6 +14,7 @@ namespace Empwage
             empwage.SwitchCase();
             empwage.MonthlyWage();
             empwage.TotalWage();
+            empwage.ComputeEmpwage();
         }
     }
 }
