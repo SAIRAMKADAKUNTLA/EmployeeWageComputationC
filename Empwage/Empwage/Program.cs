@@ -15,6 +15,8 @@ namespace Empwage
             empwage.MonthlyWage();
             empwage.TotalWage();
             empwage.ComputeEmpwage();
+            empwage.ComputeTotalEmpwage("Heritage", 30, 5, 20);
+            empwage.ComputeTotalEmpwage("More", 40, 6, 30);
         }
     }
 }
