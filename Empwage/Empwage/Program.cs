@@ -7,16 +7,11 @@ namespace Empwage
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to employee wage computation");
-            Empwage empwage = new Empwage();
-            empwage.Attendance();
-            empwage.DailyWage();
-            empwage.ParttimeWage();
-            empwage.SwitchCase();
-            empwage.MonthlyWage();
-            empwage.TotalWage();
-            empwage.ComputeEmpwage();
-            empwage.ComputeTotalEmpwage("Heritage", 30, 5, 20);
-            empwage.ComputeTotalEmpwage("More", 40, 6, 30);
+            Empwage More = new Empwage("More", 40, 5, 20);
+            Empwage Heritage = new Empwage("Heritage", 30, 5, 10);
+            More.ComputeTotalEmpwage("More", 40, 5, 20);
+            Heritage.ComputeTotalEmpwage("Heritage", 30, 5, 10);
+
         }
     }
 }
